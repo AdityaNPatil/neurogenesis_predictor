@@ -41,4 +41,4 @@ history = model.fit(
 )
 
 # Save the model
-model.save('neurogenesis_model.h5')
+model.save('neurogenesis_model_custom.h5')

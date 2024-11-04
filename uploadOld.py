@@ -8,10 +8,10 @@ import time
 app = Flask(__name__)
 
 # Load your trained model
-model = tf.keras.models.load_model('./neurogenesis_modelTest.h5')  # Adjust this path according to model location
+model = tf.keras.models.load_model('./neurogenesis_model_custom.h5')  # Adjust this path according to model location
 
 # Define the class names based on your dataset
-class_names = ['Medium Neurogenesis', 'Low Neurogenesis', 'Very High Neurogenesis', 'High Neurogenesis']
+class_names = ['Medium Neurogenesis(25-50%)', 'Low Neurogenesis(0-25%)', 'Very High Neurogenesis(75-90%)', 'High Neurogenesis(50-75%)']
 
 def prepare_image(image):
     image = image.resize((128, 128))  # Resize to match model input
