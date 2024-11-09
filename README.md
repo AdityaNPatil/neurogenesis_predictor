@@ -52,9 +52,9 @@ To evaluate the model, use:
 python evaluate.py
 ```
 
-To make predictions using the trained model, run:
+To start app:
 ```bash
-python predict.py --image path/to/image.jpg
+python uploadTemp.py
 ```
 
 ## Future Directions
