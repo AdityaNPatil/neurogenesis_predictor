@@ -4,7 +4,7 @@ from tensorflow.keras import layers, models
 def create_neurogenesis_model(input_shape=(128, 128, 3), num_classes=4):
     """
     This model is for predicting neurogenesis rates based on MRI scans.
-    Input shape is (128, 128) and the output is a softmax for num_classes rates.
+    Input shape is (128, 128, 3) and the output is a softmax for num_classes rates.
     """
     model = models.Sequential([
         layers.Conv2D(32, (3, 3), activation='relu', input_shape=input_shape),  # Feature extraction

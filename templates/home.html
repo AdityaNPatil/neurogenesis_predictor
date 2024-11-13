@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Neurogenesis Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: black;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 120px 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .hero-section .container{
+            background: center/cover rgba(255, 255, 255, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            color: black;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            color: black;
+            margin-bottom: 30px;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .hero-section .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.25rem;
+            border-radius: 5px;
+            text-decoration: none;
+            width: fit-content;
+            animation: fadeInUp 2.5s ease-out;
+        }
+
+        .hero-section .btn:hover {
+            background-color: #0062cc;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 40px 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .section p {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scroll effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Key Benefits Section */
+        .benefits {
+            background-color: #e9ecef;
+            padding: 60px 0;
+        }
+
+        .benefit-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .benefit-card p {
+            color: #555;
+            font-size: 1.125rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Neurogenesis Predictor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/predict">Prediction</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Unlock Your Brain's Potential</h1>
+            <p>Discover your neurogenesis level and take steps to improve your cognitive health.</p>
+            <a href="/predict" class="btn btn-lg">Predict Now</a>
+        </div>
+    </section>
+
+    <!-- What is Neurogenesis Section -->
+    <section class="section" id="neurogenesis-section">
+        <div class="container">
+            <h2>What is Neurogenesis?</h2>
+            <p>Neurogenesis is the process of generating new neurons in the brain. It's crucial for cognitive health, learning, and emotional resilience. Higher neurogenesis levels support better memory, mood, and adaptability to stress.</p>
+        </div>
+    </section>
+
+    <!-- How Does This Predictor Help Section -->
+    <section class="section" id="predictor-help-section">
+        <div class="container">
+            <h2>How Does This Predictor Help?</h2>
+            <p>This tool offers a quick and easy way to assess neurogenesis levels and provides personalized suggestions on lifestyle changes to improve brain health. Whether for general health or recovery support, knowing your neurogenesis level can be beneficial.</p>
+        </div>
+    </section>
+
+    <!-- Key Benefits Section -->
+    <section class="benefits">
+        <div class="container text-center">
+            <h2>Key Benefits of Improving Neurogenesis</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <h3>Improved Memory</h3>
+                        <p>Enhancing neurogenesis helps boost memory retention and cognitive function, leading to better performance in daily tasks and learning.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <h3>Better Mood</h3>
+                        <p>Higher neurogenesis levels can have a positive impact on emotional health, helping reduce stress and anxiety levels.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-card">
+                        <h3>Increased Adaptability</h3>
+                        <p>Supporting neurogenesis can improve your brain's ability to adapt to new situations and challenges, enhancing your overall resilience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Neurogenesis Predictor &copy; 2024 | <a href="https://www.linkedin.com/in/aditya-p-986955237/">Aditya Patil</a> | <a href="https://www.linkedin.com/in/rupesh-dahibhate-50b1b7267/">Rupesh Dahibhate</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        // Scroll animations
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
