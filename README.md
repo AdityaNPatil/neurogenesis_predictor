@@ -43,9 +43,13 @@ To run this project locally, follow these steps:
 ## Usage
 To train the model, run the following command:
 ```bash
-python train.py
+python trainOld.py
 ```
-This will start the training process using the specified dataset and parameters defined in `train.py`.
+or
+```bash
+python newTrain.py
+```
+This will start the training process using the specified dataset and parameters defined in the python file.
 
 To evaluate the model, use:
 ```bash
@@ -54,7 +58,7 @@ python evaluate.py
 
 To start app:
 ```bash
-python uploadTemp.py
+python uploadFinal.py
 ```
 
 ## Future Directions
